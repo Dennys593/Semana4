@@ -5,10 +5,10 @@
 int menu(){
 
 int opc = 0;
-printf("\n   Seccione una opcion   \n");
-printf("1. Registrar produto\n");
+printf("\n   Seleccione una opcion   \n");
+printf("1. Registrar producto\n");
 printf("2. Ver inventario\n");
-printf("3. Producto mas cara y mas barato\n");
+printf("3. Producto mas caro y mas barato\n");
 printf("4. Buscar Producto\n");
 printf(">> ");
 opc = validarEnteroConRango(1,4);
