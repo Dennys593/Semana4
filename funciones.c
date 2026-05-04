@@ -16,6 +16,18 @@ return opc;
 
 }
 
+int registrarProducto(char nombres[10][20], float precio[10], int stock[10], int cont){
+    printf("Ingrese el nombre del producto %d: ",cont + 1);
+    leerCadena(nombres[cont],20);
+
+    printf("Ingrese el precio del producto %d: ",cont + 1);
+    precio[cont] = validarFloatConRango(0,10000);
+
+    printf("Ingrese el stock del producto %d: ",cont + 1);
+    stock[cont] = validarEnteroConRango(0,1000);
+
+    return cont + 1;
+}
 
 void verInventario(char nombres[10][20], float precio[10], int stock[10], int cont){
     if(cont == 0){
@@ -98,28 +110,3 @@ void leerCadena(char cadena[], int n){
     cadena[len] = '\0';
 }
 
-int validarEnteroConRango(int a, int b){
-    int n;
-    int aux;
-    do{
-        aux = scanf("%d",&n);
-        while((getchar()) != '\n');
-        if(aux != 1 || n < a || n > b){
-            printf("El valor ingresado es incorrecto\n>> ");
-        }
-    }while(aux!=1 || n < a || n > b);
-    return n;
-}
-
-float validarFloatConRango(int a, int b){
-    float n;
-    int aux;
-    do{
-        aux = scanf("%f",&n);
-        while((getchar()) != '\n');
-        if(aux != 1 || n < a || n > b){
-            printf("El valor ingresado es incorrecto\n>> ");
-        }
-    }while(aux!=1 || n < a || n > b);
-    return n;
-}
