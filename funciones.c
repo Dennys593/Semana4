@@ -110,3 +110,28 @@ void leerCadena(char cadena[], int n){
     cadena[len] = '\0';
 }
 
+int validarEnteroConRango(int a, int b){
+    int n;
+    int aux;
+    do{
+        aux = scanf("%d",&n);
+        while((getchar()) != '\n');
+        if(aux != 1 || n < a || n > b){
+            printf("El valor ingresado es incorrecto\n>> ");
+        }
+    }while(aux!=1 || n < a || n > b);
+    return n;
+}
+
+float validarFloatConRango(int a, int b){
+    float n;
+    int aux;
+    do{
+        aux = scanf("%f",&n);
+        while((getchar()) != '\n');
+        if(aux != 1 || n < a || n > b){
+            printf("El valor ingresado es incorrecto\n>> ");
+        }
+    }while(aux!=1 || n < a || n > b);
+    return n;
+}
