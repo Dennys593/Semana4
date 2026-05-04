@@ -16,18 +16,6 @@ return opc;
 
 }
 
-int registrarProducto(char nombres[10][20], float precio[10], int stock[10], int cont){
-    printf("Ingrese el nombre del producto %d: ",cont + 1);
-    leerCadena(nombres[cont],20);
-
-    printf("Ingrese el precio del producto %d: ",cont + 1);
-    precio[cont] = validarFloatConRango(0,10000);
-
-    printf("Ingrese el stock del producto %d: ",cont + 1);
-    stock[cont] = validarEnteroConRango(0,1000);
-
-    return cont + 1;
-}
 
 void verInventario(char nombres[10][20], float precio[10], int stock[10], int cont){
     if(cont == 0){
